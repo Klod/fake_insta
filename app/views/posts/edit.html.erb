@@ -1,0 +1,12 @@
+<h1>Edit Your Post</h1>
+
+<%=form_for @post do |f| %>
+    <div>
+    	<label>New description:</label>
+    	<%= f.text_area :caption %>
+    	<label>Attach Another picture</label>
+    	<%= f.file_field :picture%>
+    </div>
+
+	<%= f.submit %>
+<% end %>
