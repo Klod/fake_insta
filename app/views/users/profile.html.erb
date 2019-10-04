@@ -1,0 +1,10 @@
+<%=link_to "HOME", root_path %>
+<h2><%= @user.email %></h2>
+
+<% @user.posts.each do |post| %>
+    <div>
+        <%= image_tag post.picture, height: 200 %>
+        <li><%= post.caption %></li>
+    </div>    
+<% end %>
+

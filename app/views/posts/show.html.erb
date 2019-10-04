@@ -2,15 +2,15 @@
 <h1>Post insta</h1>
 
 <% if @posts.picture.attached? %>
-    	<%= image_tag @posts.picture, height: 200 %>
+    	<%= image_tag @posts.picture, height: 300 %>
 <% end %>
 
 <div><%= @posts.caption %></div>
 
     <% if @posts.user_id == current_user.id %>
-        <%=link_to "delete",    post_path(@posts),
-                            method: :delete,
-                            data: {confirm: "Are you sure?"} %>
+        <%=link_to "delete", post_path(@posts),
+                             method: :delete,
+                             data: {confirm: "Are you sure?"} %>
                             
         <%=link_to "edit", edit_post_path%>                    
         
